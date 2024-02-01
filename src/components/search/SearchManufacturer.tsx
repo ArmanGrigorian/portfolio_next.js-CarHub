@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { manufacturers } from "@/constants";
-import { I_Manufacturer } from "../../types/index";
+import { SearchManufacturerProps } from "../../types/index";
 import { ChangeEvent, Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 
-const SearchManufacturer = ({ manufacturer, setManufacturer }: I_Manufacturer) => {
+const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacturerProps) => {
 	const [query, setQuery] = useState("");
 
 	const filteredManufacturers =

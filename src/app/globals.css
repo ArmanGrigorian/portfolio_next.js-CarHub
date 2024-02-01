@@ -9,11 +9,11 @@
 }
 
 a:hover {
-	opacity: 0.6;
+	opacity: 0.7;
 }
 
 button:hover {
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 /* General styles */
@@ -38,7 +38,7 @@ button:hover {
 }
 
 .custom-btn {
-	@apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+	@apply flex flex-row relative justify-center items-center py-3 px-6 outline-none shadow-xl;
 }
 
 /* Hero styles */

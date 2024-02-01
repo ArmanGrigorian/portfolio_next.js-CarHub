@@ -1,3 +1,9 @@
+export { Card } from "./car/Card";
+export { CardTitle } from "./car/CardTitle";
+export { DetailsModal } from "./car/DetailsModal";
+export { CardRentInfo } from "./car/CardRentInfo";
+export { CardImage } from "./car/CardImage";
+export { CardInfo } from "./car/CardInfo";
 export { AllRightsReserved } from "./footer/AllRightsReserved";
 export { CopyrightsLink } from "./footer/CopyrightsLink";
 export { Footer } from "./footer/Footer";
@@ -17,6 +23,7 @@ export { HeroImageOverlay } from "./hero/HeroImageOverlay";
 export { HeroLeft } from "./hero/HeroLeft";
 export { Catalog } from "./home/Catalog";
 export { CustomFilter } from "./home/CustomFilter";
+export { HomeCarsWrapper } from "./home/HomeCarsWrapper";
 export { HomeFilterContainer } from "./home/HomeFilterContainer";
 export { HomeFilters } from "./home/HomeFilters";
 export { HomeTextContainer } from "./home/HomeTextContainer";

@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import {  useState } from "react";
 import { SearchManufacturer } from "..";
 
 const SearchBar = () => {
 	const [manufacturer, setManufacturer] = useState("");
+	
 
 	function handleSearch() {
 		console.log("Submit");
@@ -20,3 +21,4 @@ const SearchBar = () => {
 };
 
 export { SearchBar };
+
