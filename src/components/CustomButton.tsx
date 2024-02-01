@@ -1,8 +1,8 @@
 "use client";
 
-import { I_Button } from "@/types";
+import { I_CustomButton } from "@/types";
 
-const Button = ({ title, type, containerStyles, handleClick }: I_Button) => {
+const CustomButton = ({ title, type, containerStyles, handleClick }: I_CustomButton) => {
 	return (
 		<button
 			className={`custom-btn ${containerStyles}`}
@@ -14,4 +14,4 @@ const Button = ({ title, type, containerStyles, handleClick }: I_Button) => {
 	);
 };
 
-export { Button };
+export { CustomButton };

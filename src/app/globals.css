@@ -173,11 +173,11 @@
 }
 
 .footer__links {
-   @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20 text-center;
+   @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20 ;
 }
 
-.footer__link {
-   @apply flex flex-col gap-6 text-base min-w-[170px];
+.footer__category {
+   @apply flex flex-col gap-6 text-base ml-[8%];
 }
 
 .footer__copyrights {
@@ -185,7 +185,7 @@
 }
 
 .footer__copyrights-link {
-   @apply  flex justify-center items-center gap-5;
+   @apply flex justify-center items-center gap-5;
 }
 
 /* END: Footer styles */

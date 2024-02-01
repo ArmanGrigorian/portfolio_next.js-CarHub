@@ -1,9 +1,9 @@
 import { T_category, T_link } from "@/types";
-import { FooterLink } from "../index";
+import { FooterLink } from "./index";
 
 const FooterCategory = (category: T_category) => {
 	return (
-		<div className="footer__link" key={category.title}>
+		<div className="footer__category" key={category.title}>
 			<h3 className="font-bold select-none">{category.title}</h3>
 
 			{category.links.map((link: T_link) => {

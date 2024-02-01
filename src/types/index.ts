@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 
-export interface I_Button {
+export interface I_CustomButton {
 	title: string;
 	type?: "submit" | "reset" | "button";
 	containerStyles?: string;
