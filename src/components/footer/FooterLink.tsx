@@ -1,5 +1,5 @@
-import { T_link } from "@/types";
 import Link from "next/link";
+import { T_link } from "@/types";
 
 const FooterLink = (link: T_link) => {
 	return (

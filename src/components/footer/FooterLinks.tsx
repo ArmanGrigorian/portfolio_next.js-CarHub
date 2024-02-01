@@ -1,5 +1,5 @@
-import { footerLinks } from "@/constants";
 import { T_category } from "@/types";
+import { footerLinks } from "@/constants";
 import { FooterCategory } from "../index";
 
 const FooterLinks = () => {
