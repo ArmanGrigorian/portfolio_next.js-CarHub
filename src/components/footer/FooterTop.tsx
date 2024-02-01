@@ -1,4 +1,4 @@
-import { FooterLinks, Logo } from "./index";
+import { FooterLinks, Logo } from "../index";
 
 const FooterTop = () => {
 	const currentYear = new Date().getFullYear();

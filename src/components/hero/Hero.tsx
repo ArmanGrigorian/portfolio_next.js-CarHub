@@ -1,6 +1,6 @@
 "use client";
 
-import { HeroImageContainer, HeroLeft } from "./index";
+import { HeroImageContainer, HeroLeft } from "../index";
 
 const Hero = () => {
 	return (

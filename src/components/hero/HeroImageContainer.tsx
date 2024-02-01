@@ -1,4 +1,4 @@
-import { HeroImage, HeroImageOverlay } from ".";
+import { HeroImage, HeroImageOverlay } from "..";
 
 const HeroImageContainer = () => {
 	return (

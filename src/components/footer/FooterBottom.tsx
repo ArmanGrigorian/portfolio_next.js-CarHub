@@ -1,4 +1,4 @@
-import { AllRightsReserved, CopyrightsLink } from "./index";
+import { AllRightsReserved, CopyrightsLink } from "../index";
 
 const FooterBottom = () => {
 	return (

@@ -18,3 +18,8 @@ export type T_category = {
 	title: string;
 	links: T_links;
 };
+
+export interface I_Manufacturer {
+	manufacturer: string;
+	setManufacturer: (manufacturer: string) => void;
+}

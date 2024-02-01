@@ -1,4 +1,4 @@
-import { CustomButton, Logo } from "./index";
+import { CustomButton, Logo } from "../index";
 
 const Navbar = () => {
 	return (

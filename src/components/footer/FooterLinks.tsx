@@ -1,6 +1,6 @@
 import { footerLinks } from "@/constants";
 import { T_category } from "@/types";
-import { FooterCategory } from "./index";
+import { FooterCategory } from "../index";
 
 const FooterLinks = () => {
 	return (
