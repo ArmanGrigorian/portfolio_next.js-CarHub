@@ -1,4 +1,10 @@
-export { Header } from "./Header";
-export { Hero } from "./Hero";
 export { Button } from "./Button";
-export { Footer } from "./Footer";
+export { Footer } from "./Footer/Footer";
+export { FooterCategory } from "./Footer/FooterCategory";
+export { FooterLink } from "./Footer/FooterLink";
+export { FooterLinks } from "./Footer/FooterLinks";
+export { FooterBottom } from "./Footer/FooterBottom";
+export { Header } from "./Header/Header";
+export { Navbar } from "./Header/Navbar";
+export { Hero } from "./Hero";
+export { Logo } from "./Logo";

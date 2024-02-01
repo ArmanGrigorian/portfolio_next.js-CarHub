@@ -1,8 +1,8 @@
 "use client";
 
-import { ButtonProps } from "@/types";
+import { I_Button } from "@/types";
 
-const Button = ({ title, type, containerStyles, handleClick }: ButtonProps) => {
+const Button = ({ title, type, containerStyles, handleClick }: I_Button) => {
 	return (
 		<button
 			className={`custom-btn ${containerStyles}`}

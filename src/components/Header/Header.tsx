@@ -2,7 +2,7 @@ import { Navbar } from "./Navbar";
 
 const Header = () => {
 	return (
-		<header className="w-full absolute z-10">
+		<header className="px-5 py-7 max-w-[1440px] mx-auto w-full absolute left-0 right-0 z-10">
 			<Navbar />
 		</header>
 	);
