@@ -60,3 +60,4 @@ export type CardInfoProps = {
 	city_mpg: number;
 	handleOpen: () => void;
 };
+

@@ -6,7 +6,7 @@ const instance = axios.create({
 		"X-RapidAPI-Key": "abdd700650msh552974bad893c5fp1ceca0jsn702c512940c9",
 		"X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
 	},
-	params: { model: "q3" },
+	params: { model: "Tiguan" },
 });
 
 export const carsAPI = {
