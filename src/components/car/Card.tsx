@@ -10,7 +10,7 @@ const Card = (car: T_car) => {
 	const carRent = calculateCarRent(city_mpg, year);
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
-	function handleOpen() {
+	function handleModal() {
 		setIsOpen((prevOpen) => !prevOpen);
 	}
 
@@ -23,9 +23,9 @@ const Card = (car: T_car) => {
 				transmission={transmission}
 				drive={drive}
 				city_mpg={city_mpg}
-				handleOpen={handleOpen}
+				handleOpen={handleModal}
 			/>
-			<DetailsModal isOpen={isOpen} closeModal={handleOpen} car={car} />
+			<DetailsModal isOpen={isOpen} closeModal={handleModal} car={car} />
 		</div>
 	);
 };
