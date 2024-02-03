@@ -24,8 +24,8 @@ const SearchBar = () => {
 			searchParams.delete("model");
 		}
 
-		const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
-		router.push(newPathname, { scroll: false });
+		const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
+		router.push(newPathName, { scroll: false });
 	}
 
 	function handleSearch(e: FormEvent<HTMLFormElement>) {

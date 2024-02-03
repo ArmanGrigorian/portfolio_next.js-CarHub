@@ -76,3 +76,13 @@ export type T_searchParams = {
 	limit?: number;
 	fuel?: string;
 };
+
+export type OptionProps = {
+	title: string;
+	value: string;
+};
+
+export type CustomFilterProps = {
+	title: string;
+	options: OptionProps[];
+};

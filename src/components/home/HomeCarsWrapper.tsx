@@ -1,6 +1,6 @@
 import { getAllCars } from "@/api/api";
 import { T_car, T_searchParams } from "@/types";
-import { Card } from "..";
+import { Card, ShowMore } from "..";
 
 const HomeCarsWrapper = async (searchParams: T_searchParams) => {
 	const allCars = await getAllCars(searchParams);
@@ -16,6 +16,10 @@ const HomeCarsWrapper = async (searchParams: T_searchParams) => {
 							<Card key={crypto.randomUUID()} {...car} />
 						))}
 					</div>
+					<ShowMore
+						limit={(searchParams.limit || 10) / 10}
+						isNext={(searchParams.limit || 10) > allCars.length}
+					/>
 				</section>
 			) : (
 				<section className="mt-5">

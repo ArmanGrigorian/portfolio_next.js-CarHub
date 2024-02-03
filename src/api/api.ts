@@ -2,15 +2,14 @@ import { T_searchParams } from "@/types";
 
 export async function getAllCars(searchParams: T_searchParams) {
 	const options: T_searchParams = {
-		make: searchParams.make || "toyota",
-		model: searchParams.model || "corolla",
+		make: searchParams.make || " ",
+		model: searchParams.model || " ",
 		year: searchParams.year,
 		limit: searchParams.limit || 10,
-		fuel: searchParams.fuel || "",
+		fuel: searchParams.fuel || " ",
 	};
 
 	const { make, model, year, limit, fuel } = options;
-
 
 	const params = `make=${make}&model=${model}&year=${year}&limit=${limit}&fuel_type=${fuel}`;
 

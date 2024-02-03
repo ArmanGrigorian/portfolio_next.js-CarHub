@@ -31,3 +31,4 @@ export { SearchBar } from "./search/SearchBar";
 export { SearchButton } from "./search/SearchButton";
 export { SearchMake } from "./search/SearchMake";
 export { SearchModel } from "./search/SearchModel";
+export { ShowMore } from "./home/ShowMore";
