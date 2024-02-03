@@ -1,19 +1,32 @@
-import axios from "axios";
+import { T_searchParams } from "@/types";
 
-const instance = axios.create({
-	baseURL: "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars",
-	headers: {
+export async function getAllCars(searchParams: T_searchParams) {
+	const options: T_searchParams = {
+		make: searchParams.make || "toyota",
+		model: searchParams.model || "corolla",
+		year: searchParams.year,
+		limit: searchParams.limit || 10,
+		fuel: searchParams.fuel || "",
+	};
+
+	const { make, model, year, limit, fuel } = options;
+
+
+	const params = `make=${make}&model=${model}&year=${year}&limit=${limit}&fuel_type=${fuel}`;
+
+	const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?${params}`;
+
+	const headers = {
 		"X-RapidAPI-Key": "abdd700650msh552974bad893c5fp1ceca0jsn702c512940c9",
 		"X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
-	},
-	params: { model: "Tiguan" },
-});
+	};
 
-export const carsAPI = {
-	getAllCars: () => {
-		return instance.get("");
-	},
-};
+	const req = await fetch(url, {
+		headers: headers,
+	});
+	const res = await req.json();
+	return res;
+}
 
 export function generateCarImageURL(make: string, model: string, year: number, angle?: string) {
 	const url = new URL("https://cdn.imagin.studio/getimage");

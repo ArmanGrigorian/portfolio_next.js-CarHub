@@ -29,5 +29,5 @@ export { HomeFilters } from "./home/HomeFilters";
 export { HomeTextContainer } from "./home/HomeTextContainer";
 export { SearchBar } from "./search/SearchBar";
 export { SearchButton } from "./search/SearchButton";
-export { SearchManufacturer } from "./search/SearchManufacturer";
+export { SearchMake } from "./search/SearchMake";
 export { SearchModel } from "./search/SearchModel";

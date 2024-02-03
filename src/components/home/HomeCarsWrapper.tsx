@@ -1,10 +1,9 @@
-import { carsAPI } from "@/api/api";
-import { T_car } from "@/types";
+import { getAllCars } from "@/api/api";
+import { T_car, T_searchParams } from "@/types";
 import { Card } from "..";
 
-const HomeCarsWrapper = async () => {
-	const allCarsResponse = await carsAPI.getAllCars();
-	const allCars = allCarsResponse.data;
+const HomeCarsWrapper = async (searchParams: T_searchParams) => {
+	const allCars = await getAllCars(searchParams);
 
 	return (
 		<>
@@ -21,7 +20,6 @@ const HomeCarsWrapper = async () => {
 			) : (
 				<section className="mt-5">
 					<h3 className="text-black text-xl font-bold">Oops, no results</h3>
-                  <p>Status: {allCarsResponse.status}</p>
 				</section>
 			)}
 		</>

@@ -2,21 +2,18 @@
 
 import Image from "next/image";
 import { manufacturers } from "@/constants";
-import { SearchManufacturerProps } from "../../types/index";
+import { SearchMakeProps } from "../../types/index";
 import { ChangeEvent, Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 
-const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacturerProps) => {
+const SearchMake = ({ make, setMake }: SearchMakeProps) => {
 	const [query, setQuery] = useState("");
 
-	const filteredManufacturers =
+	const filteredMakes =
 		query === ""
 			? manufacturers
-			: manufacturers.filter((manufacturer) =>
-					manufacturer
-						.toLowerCase()
-						.replace(/\s+/g, "")
-						.includes(query.toLowerCase().replace(/\s+/g, "")),
+			: manufacturers.filter((make) =>
+					make.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g, "")),
 			  );
 
 	function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -24,8 +21,8 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 	}
 
 	return (
-		<div className="search-manufacturer">
-			<Combobox value={manufacturer} onChange={setManufacturer}>
+		<div className="search-make">
+			<Combobox value={make} onChange={setMake}>
 				<div className="relative w-full">
 					<Combobox.Button className="absolute top-[14px]">
 						<Image
@@ -37,9 +34,9 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 						/>
 					</Combobox.Button>
 					<Combobox.Input
-						className="search-manufacturer__input"
+						className="search-make__input"
 						placeholder="Volkswagen"
-						displayValue={(manufacturer: string) => manufacturer}
+						displayValue={(make: string) => make}
 						onChange={handleChange}
 					/>
 
@@ -50,25 +47,25 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 						leaveTo="opacity-0"
 						afterLeave={() => setQuery("")}>
 						<Combobox.Options className="bg-gray-50 mt-4 max-h-48 overflow-y-auto">
-							{filteredManufacturers.length === 0 && query !== "" ? (
-								<Combobox.Option className="search-manufacturer__option" value={query}>
+							{filteredMakes.length === 0 && query !== "" ? (
+								<Combobox.Option className="search-make__option" value={query}>
 									Create &quot;{query}&quot;
 								</Combobox.Option>
 							) : (
-								filteredManufacturers.map((manufacturer) => (
+								filteredMakes.map((make) => (
 									<Combobox.Option
 										className={({ active }) =>
-											`search-manufacturer__option ${
+											`search-make__option ${
 												active ? "bg-primary-blue text-slate-100" : "text-gray-900"
 											} `
 										}
 										key={crypto.randomUUID()}
-										value={manufacturer}>
+										value={make}>
 										{({ selected, active }) => (
 											<>
 												<span
 													className={`block truncate ${selected ? "font-medium" : "font-normal"}`}>
-													{manufacturer}
+													{make}
 												</span>
 												{selected && (
 													<span
@@ -89,4 +86,4 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 	);
 };
 
-export { SearchManufacturer };
+export { SearchMake };

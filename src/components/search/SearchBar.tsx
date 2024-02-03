@@ -1,21 +1,21 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useState } from "react";
-import { SearchButton, SearchManufacturer, SearchModel } from "..";
 import { useRouter } from "next/navigation";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { SearchButton, SearchMake, SearchModel } from "..";
 
 const SearchBar = () => {
-	const [manufacturer, setManufacturer] = useState("");
+	const [make, setMake] = useState("");
 	const [model, setModel] = useState("");
 	const router = useRouter();
 
-	function updateSearchParams(manufacturer: string, model: string) {
+	function updateSearchParams(make: string, model: string) {
 		const searchParams = new URLSearchParams(window.location.search);
 
-		if (manufacturer) {
-			searchParams.set("manufacturer", manufacturer);
+		if (make) {
+			searchParams.set("make", make);
 		} else {
-			searchParams.delete("manufacturer");
+			searchParams.delete("make");
 		}
 
 		if (model) {
@@ -25,17 +25,17 @@ const SearchBar = () => {
 		}
 
 		const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
-		router.push(newPathname);
+		router.push(newPathname, { scroll: false });
 	}
 
 	function handleSearch(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
-		if (manufacturer === "" && model === "") {
+		if (make === "" && model === "") {
 			return alert("Please fill in the search bar");
 		}
 
-		updateSearchParams(manufacturer.toLowerCase(), model.toLowerCase());
+		updateSearchParams(make.toLowerCase(), model.toLowerCase());
 	}
 
 	function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -45,7 +45,7 @@ const SearchBar = () => {
 	return (
 		<form className="searchBar" onSubmit={handleSearch}>
 			<div className="searchBar__item">
-				<SearchManufacturer manufacturer={manufacturer} setManufacturer={setManufacturer} />
+				<SearchMake make={make} setMake={setMake} />
 				<SearchButton otherClasses={"sm:hidden"} />
 			</div>
 

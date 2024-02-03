@@ -22,9 +22,9 @@ export type T_category = {
 	links: T_links;
 };
 
-export type SearchManufacturerProps = {
-	manufacturer: string;
-	setManufacturer: (manufacturer: string) => void;
+export type SearchMakeProps = {
+	make: string;
+	setMake: (make: string) => void;
 };
 
 export type T_car = {
@@ -61,3 +61,18 @@ export type CardInfoProps = {
 	handleOpen: () => void;
 };
 
+export type T_filters = {
+	make: string;
+	model: string;
+	year: number;
+	fuel: string;
+	limit: number;
+};
+
+export type T_searchParams = {
+	make?: string;
+	model?: string;
+	year?: number;
+	limit?: number;
+	fuel?: string;
+};
