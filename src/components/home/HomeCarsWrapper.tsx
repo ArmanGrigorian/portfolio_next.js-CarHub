@@ -2,6 +2,7 @@ import { getAllCars } from "@/api/api";
 import { T_car, T_searchParams } from "@/types";
 import { Card, ShowMore } from "..";
 
+
 const HomeCarsWrapper = async (searchParams: T_searchParams) => {
 	const allCars = await getAllCars(searchParams);
 
